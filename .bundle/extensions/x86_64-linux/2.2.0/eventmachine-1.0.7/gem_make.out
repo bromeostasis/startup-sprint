@@ -1,0 +1,12 @@
+/home/nitrous/.rvm/rubies/ruby-2.2.0/bin/ruby -r ./siteconf20150624-2192-1wq952.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling rubymain.cpp
+compiling mapper.cpp
+linking shared-object fastfilereaderext.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 fastfilereaderext.so ./.gem.20150624-2192-1x12u50
