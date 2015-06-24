@@ -49,4 +49,9 @@ class App < Sinatra::Base
 
     erb :schedule
   end
+
+  get '/home' do
+    @error = params['error']
+    erb :home
+  end
 end
