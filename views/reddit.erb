@@ -1,2 +1,7 @@
-<script src="http://www.reddit.com/.embed?limit=5" type="text/javascript">
-</script>
+
+<% @listings.each do |listing| %>
+	<%= listing["data"]["author"] %> wrote <a href='<%= listing["data"]["url"]%>'> <%= listing["data"]["title"] %> </a>
+	<br>
+	It got <%= listing["data"]["ups"] %> upvotes
+	<br><br>
+<% end %>
