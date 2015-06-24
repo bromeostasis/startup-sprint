@@ -54,4 +54,9 @@ class App < Sinatra::Base
     @error = params['error']
     erb :home
   end
+
+  get '/youtube' do
+    erb :youtube
+  end
+
 end
