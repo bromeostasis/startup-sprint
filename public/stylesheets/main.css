@@ -11,6 +11,10 @@
     float: left;
 }
 
+#splash {
+    background: pink;
+}
+
 
 html {
     color: #222;

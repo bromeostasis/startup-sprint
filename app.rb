@@ -58,5 +58,8 @@ class App < Sinatra::Base
   get '/youtube' do
     erb :youtube
   end
+    get '/splash' do
+    erb :splash
+  end
 
 end
