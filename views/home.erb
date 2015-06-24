@@ -4,13 +4,25 @@
 <h3>Subscribe to the Startup Sprint newsletter</h3>
 <% if @error == 'email' %>
   <p style="color: red;">Please enter a valid email</p>
+  <form method=POST action="/subscribe">
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" name="full_name" value="<%= @name %>" required>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" value="<%= @email %>" required>
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" value="<%= @city %>" required>
+    <input type="Submit">
+  </form>
+<% else %>
+  <form method=POST action="/subscribe">
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" name="full_name" required>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" required>
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" required>
+    <input type="Submit">
+  </form>
 <% end %>
-<form method=POST action="/subscribe">
-  <label for="full-name">Full Name</label>
-  <input type="text" id="full-name" name="full_name" required>
-  <label for="email">Email</label>
-  <input type="text" id="email" name="email" required>
-  <label for="city">City</label>
-  <input type="text" id="city" name="city" required>
-  <input type="Submit">
-</form>
+
+
